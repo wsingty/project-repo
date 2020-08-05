@@ -5,8 +5,8 @@ var url1 = `https://getsupport.atlassian.com/issues/?jql=text ~ '${summary}' OR 
 var sen = document.getElementById('senTextViewField').value.replace("SEN-", "");
 var url5 = 'https://cassi.internal.atlassian.com/ui/cloud-sites/' + sen;
 var url6 = 'https://confluence.atlassian.com/search/?query=' + component;
-var url7 = `https://jira.atlassian.com/issues/?jql=text ~ '${summary}' OR text ~ '${component}' AND issuetype="Bug"`;
-var url8 = `https://jira.atlassian.com/issues/?jql=text ~ '${summary}' OR text ~ '${component}' AND issuetype in (Improvement, "New Feature", Suggestion)`;
+var url7 = `https://jira.atlassian.com/issues/?jql=issuetype="Bug" AND text ~ '${summary}' OR text ~ '${component}'`;
+var url8 = `https://jira.atlassian.com/issues/?jql=issuetype in (Improvement, "New Feature", Suggestion) AND text ~ '${summary}' OR text ~ '${component}'`;
 
 class obj{
     constructor(btn, btn_id, btn_name){
