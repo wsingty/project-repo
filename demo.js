@@ -1,5 +1,5 @@
 javascript:
-var summary = document.getElementById('summary-val').innerText;
+var summary = document.getElementById('summary-val').innerText.replace(/(\[.*?\])/g, '');
 var component = document.getElementById('components-val').innerText;
 var url1 = `https://getsupport.atlassian.com/issues/?jql=text ~ '${summary}' OR text ~ '${component}'`;
 var sen = document.getElementById('senTextViewField').value.replace("SEN-", "");
